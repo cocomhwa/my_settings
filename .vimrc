@@ -1,0 +1,19 @@
+syntax on
+set nu
+set autoindent
+set smartindent
+set ts=4
+set sts=4
+set shiftwidth=4
+set smarttab
+set ruler
+set showtabline=2
+set mouse=a
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+colo gruvbox
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
