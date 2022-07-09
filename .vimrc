@@ -9,6 +9,9 @@ set smarttab
 set ruler
 set showtabline=2
 set mouse=a
+set showcmd
+set cursorline
+set cursorcolumn
 set hlsearch
 set incsearch
 set ignorecase
@@ -16,6 +19,8 @@ set smartcase
 set list listchars=eol:↲,trail:␣,tab:\|.
 set path+=**
 set	wildmenu
+set wildmode=list:full
+match ErrorMsg '\%>80v.\+'
 let g:user42 = 'wooshin'
 let g:mail42 = 'wooshin@student.42seoul.kr'
 nnoremap <esc> :noh<return><esc>
