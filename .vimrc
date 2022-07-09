@@ -14,8 +14,12 @@ set incsearch
 set ignorecase
 set smartcase
 set list listchars=eol:↲,trail:␣,tab:\|.
+set path+=**
+set	wildmenu
 let g:user42 = 'wooshin'
 let g:mail42 = 'wooshin@student.42seoul.kr'
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
 colo gruvbox
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
