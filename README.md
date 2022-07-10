@@ -1,3 +1,4 @@
 # my_settings
-my settings are included.
+my settings are included.  
+by cocomwha  
 -supported by eastriver
