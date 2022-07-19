@@ -29,6 +29,7 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 " colorscheme
 colo gruvbox
+hi Comment cterm=italic
 call plug#begin()
 " Plug
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
