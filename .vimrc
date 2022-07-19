@@ -21,14 +21,21 @@ set path+=**
 set	wildmenu
 set wildmode=list:full
 match ErrorMsg '\%>80v.\+'
+" 42 header setting
 let g:user42 = 'wooshin'
 let g:mail42 = 'wooshin@student.42seoul.kr'
+" esc = noh
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+" colorscheme
 colo gruvbox
 call plug#begin()
+" Plug
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
 call plug#end()
+" Airline setting
+let g:airline_powerline_fonts = 1
 " Header File
 function! s:guard()
   let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
