@@ -1,0 +1,10 @@
+colorscheme blue
+hi Typedef guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
+hi PreProc guifg=#bbff00 guibg=NONE guisp=NONE gui=NONE ctermfg=154 ctermbg=NONE cterm=NONE
+hi Type guifg=#f9b5ff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE
+hi Comment guifg=#498772 guibg=NONE guisp=NONE gui=italic ctermfg=66 ctermbg=NONE cterm=NONE
+hi Special guifg=#4b5b8a guibg=NONE guisp=NONE gui=NONE ctermfg=60 ctermbg=NONE cterm=NONE
+hi Function guifg=#ff7d66 guibg=NONE guisp=NONE gui=NONE ctermfg=209 ctermbg=NONE cterm=NONE
+highlight CursorLine cterm=none
+highlight CursorLineNr cterm=none ctermfg=yellow
+set cursorline
