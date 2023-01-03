@@ -35,7 +35,11 @@ let g:mail42 = 'wooshin@student.42seoul.kr'
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 " colorscheme
-colo gruvbox
+set termguicolors
+set background=dark
+colo gruvbox8
+let g:lightline = {'colorscheme' : 'gruvbox8'}
+let g:airline_theme = 'gruvbox8'
 hi Comment cterm=italic
 call plug#begin()
 " Plug
@@ -53,3 +57,28 @@ function! s:guard()
   normal! ko
 endfunction
 autocmd BufNewFile *.{h,hpp} call <SID>guard()
+"COC settings
+"gd->정의 찾기
+"gr->쓰인곳가기
+"gc->바꾸기
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gh :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('gh', 'in')
+  endif
+endfunction
+autocmd CursorHold * silent call CocActionAsync('highlight')
+nmap <silent>gc <Plug>(coc-rename)
+"folding
+set foldmethod=indent foldlevelstart=0 foldnestmax=1
+nmap <silent>g<Left> zm
+nmap <silent>g<Right> zr
+nnoremap <space> za
