@@ -15,3 +15,6 @@ plugins=(
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )
+
+#enable code(vscode run) command
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
